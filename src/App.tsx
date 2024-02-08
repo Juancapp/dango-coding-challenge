@@ -1,5 +1,9 @@
+import { context } from "./context";
+
 function App() {
-  return <></>;
+  const fs = "text-2xl";
+
+  return <context.Provider value={{ fontSize: fs }}></context.Provider>;
 }
 
 export default App;
