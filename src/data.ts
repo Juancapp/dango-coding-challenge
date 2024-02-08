@@ -1,7 +1,7 @@
-import ArganOil from "./assets/Argan Oil.jpeg";
+import ArganOil from "./assets/Argan Oil.jpg";
 import Eucalyptus from "./assets/Eucalyptus.jpg";
 import TeaTree from "./assets/TeaTree.jpg";
-import Unscented from "./assets/Unscented.jpeg";
+import Unscented from "./assets/Unscented.jpg";
 import { Data } from "./types";
 
 const images = [ArganOil, Eucalyptus, TeaTree, Unscented];
