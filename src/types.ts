@@ -9,9 +9,12 @@ export type Image =
   | typeof TeaTree
   | typeof Unscented;
 
-export interface Data {
+export interface CardType {
   id: number;
-  image: Image;
+  image: {
+    src: Image;
+    alt: string;
+  };
   title: string;
   price: number;
   description: string;

@@ -1,8 +1,8 @@
-import ArganOil from "./assets/Argan Oil.jpg";
+import ArganOil from "./assets/Argan Oil.jpeg";
 import Eucalyptus from "./assets/Eucalyptus.jpg";
 import TeaTree from "./assets/TeaTree.jpg";
-import Unscented from "./assets/Unscented.jpg";
-import { Data } from "./types";
+import Unscented from "./assets/Unscented.jpeg";
+import { CardType } from "./types";
 
 const images = [ArganOil, Eucalyptus, TeaTree, Unscented];
 
@@ -29,7 +29,10 @@ const toPushData = [];
 for (let i = 0; i < 7; i++) {
   const pushData = {
     id: i,
-    image: i <= 3 ? images[i] : images[i - 4],
+    image: {
+      src: i <= 3 ? images[i] : images[i - 4],
+      alt: `Title example ${i}`,
+    },
     title: `Title example ${i}`,
     price: getRandomNumber(),
     description: getRandomDescription(),
@@ -38,4 +41,4 @@ for (let i = 0; i < 7; i++) {
   toPushData.push(pushData);
 }
 
-export const data: Data[] = [...toPushData];
+export const data: CardType[] = [...toPushData];
