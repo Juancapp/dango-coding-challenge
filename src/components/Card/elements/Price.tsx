@@ -1,5 +1,5 @@
 function Price({ price }: { price: number }) {
-  return <h2>${price}</h2>;
+  return <p className="text-gray-700 font-extrabold">${price}</p>;
 }
 
 export default Price;

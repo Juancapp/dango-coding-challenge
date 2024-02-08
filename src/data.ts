@@ -6,24 +6,6 @@ import { CardType } from "./types";
 
 const images = [ArganOil, Eucalyptus, TeaTree, Unscented];
 
-const getRandomNumber = () => {
-  const min = Math.ceil(10);
-  const max = Math.floor(15);
-
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-};
-
-function getRandomDescription() {
-  let randomText = "";
-  while (randomText.length < 120) {
-    randomText += Math.random().toString(36).substring(2);
-  }
-  return randomText.substring(
-    0,
-    100 + Math.floor(Math.random() * (120 - 100 + 1))
-  );
-}
-
 const toPushData = [];
 
 for (let i = 0; i < 7; i++) {
@@ -34,8 +16,9 @@ for (let i = 0; i < 7; i++) {
       alt: `Title example ${i}`,
     },
     title: `Title example ${i}`,
-    price: getRandomNumber(),
-    description: getRandomDescription(),
+    price: parseFloat((Math.random() * (15 - 10) + 10).toFixed(2)),
+    description:
+      "Recharge your skin with the super energizing power of finely crushed to tourmaline powder blended with natural complexion",
   };
 
   toPushData.push(pushData);
