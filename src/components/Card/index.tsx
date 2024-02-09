@@ -34,7 +34,12 @@ function Card(
   };
 
   const handleQuantityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    while (e.target.value.charAt(0) === "0") {
+      e.target.value = e.target.value.slice(1);
+    }
+
     const quantity = Number(e.target.value);
+
     if (!isNaN(quantity)) {
       onQuantityChange(quantity, id);
     }
