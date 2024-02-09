@@ -11,7 +11,8 @@ Card;
 function Card(
   props: CardType & {
     quantity: number;
-    onChange: (title: string, id: number) => void;
+    onTitleChange: (title: string, id: number) => void;
+    onQuantityChange: (quantity: number, id: number) => void;
   }
 ) {
   const {
@@ -21,13 +22,21 @@ function Card(
     image,
     price,
     quantity = 0,
-    onChange,
+    onTitleChange,
+    onQuantityChange,
   } = props;
   const [edit, setEdit] = useState<boolean>(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.value.length >= 3) {
-      onChange(e.target.value, id);
+      onTitleChange(e.target.value, id);
+    }
+  };
+
+  const handleQuantityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const quantity = Number(e.target.value);
+    if (!isNaN(quantity)) {
+      onQuantityChange(quantity, id);
     }
   };
 
@@ -53,7 +62,7 @@ function Card(
           <input
             type="text"
             className="border-2 border-gray-300 px-2"
-            onChange={handleChange}
+            onChange={handleTitleChange}
             value={title}
           />
         )}
@@ -62,6 +71,7 @@ function Card(
         <Price price={price} />
         <input
           type="number"
+          onChange={handleQuantityChange}
           value={quantity}
           className="border-2 border-gray-300 w-11 text-center"
         />

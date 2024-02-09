@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { context } from "../../../context";
+import { Context } from "../../../context";
 
 function Title({ title }: { title: string }) {
-  const userContext = useContext(context);
+  const userContext = useContext(Context);
 
   return (
     <h1 className={`font-bold mb-2 ${userContext.fontSize} inline-block`}>
