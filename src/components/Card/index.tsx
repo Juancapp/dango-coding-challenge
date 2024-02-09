@@ -46,11 +46,11 @@ function Card(
   };
 
   return (
-    <div className="flex flex-col bg-white m-4 px-6 py-12 border-4 rounded-sm border-black max-w-xs gap-5">
+    <div className="flex flex-col bg-white m-4 px-6 py-12 border-4 rounded-sm border-black sm:max-w-full gap-5 min-w-0">
       <img
         src={image.src}
         alt={image.alt}
-        className="w-full rounded object-cover object-center"
+        className="w-full rounded-xl object-cover object-center"
       />
       <div>
         <div className="flex gap-2">

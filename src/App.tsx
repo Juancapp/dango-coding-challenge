@@ -8,7 +8,7 @@ function App() {
   const { totalQuantity } = useContext(Context);
 
   return (
-    <div className="py-4 pr-3 flex flex-col gap-10">
+    <div className="py-4 pr-3 flex flex-col gap-10 justify-center align-middle">
       <div className="flex flex-row gap-10 align-middle self-end">
         <div className="flex flex-row">
           <ShoppingCartIcon className="h-7 w-8 cursor-pointer" />

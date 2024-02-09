@@ -8,6 +8,7 @@ const images = [ArganOil, Eucalyptus, TeaTree, Unscented];
 
 const toPushData = [];
 
+// Edit the value of "i" to change the number of cards to be displayed
 for (let i = 0; i < 7; i++) {
   const pushData = {
     id: i,
