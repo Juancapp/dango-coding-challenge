@@ -8,7 +8,7 @@ const images = [ArganOil, Eucalyptus, TeaTree, Unscented];
 
 const toPushData = [];
 
-// Edit the value of "i" to change the number of cards to be displayed
+// Edit the value of "i" to change the number of cards to be displayed (That is a personal message to clarify to the user if he wants to add more data)
 for (let i = 0; i < 7; i++) {
   const pushData = {
     id: i,
