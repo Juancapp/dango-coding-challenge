@@ -4,7 +4,7 @@ import Button from "./elements/Button";
 import Description from "./elements/Description";
 import Price from "./elements/Price";
 import Title from "./elements/Title";
-import { PencilIcon, XMarkIcon } from "@heroicons/react/16/solid";
+import { PencilIcon, CheckIcon } from "@heroicons/react/24/outline";
 
 Card;
 
@@ -62,7 +62,7 @@ function Card(
             {!edit ? (
               <PencilIcon className="h-4 w-4 mb-4 cursor-pointer" />
             ) : (
-              <XMarkIcon className="h-4 w-4 mb-4 cursor-pointer" />
+              <CheckIcon className="h-4 w-4 mb-4 cursor-pointer" />
             )}
           </button>
         </div>
