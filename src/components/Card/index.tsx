@@ -53,9 +53,12 @@ function Card(
         className="w-full rounded-xl object-cover object-center"
       />
       <div>
-        <div className="flex gap-2">
+        <div className="flex gap-2 relative">
           <Title title={title} />
-          <button onClick={() => setEdit(!edit)}>
+          <button
+            className="absolute top-5 right-0 transform translate-x-[-50%] translate-y-[-50%]"
+            onClick={() => setEdit(!edit)}
+          >
             {!edit ? (
               <PencilIcon className="h-4 w-4 mb-4 cursor-pointer" />
             ) : (
@@ -83,7 +86,7 @@ function Card(
       </div>
       <Description description={description} />
       <Button />
-      <a className="text-center cursor-pointer underline">Learn more</a>
+      <a className="text-center text-lg cursor-pointer underline">Learn more</a>
     </div>
   );
 }
